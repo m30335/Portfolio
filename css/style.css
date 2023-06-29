@@ -1,7 +1,8 @@
 * {
   padding: 0;
   margin: 0;
-  cursor: pointer;
+  background-color: rgb(45, 43, 93);
+  cursor: default;
 }
 
 body {
@@ -16,10 +17,10 @@ body::-webkit-scrollbar {
 @media only screen and (min-device-width: 1000px) {
   body {
     height: 200vh;
-    max-width: 100%;
+    width: 100%;
     background: linear-gradient(135deg, rgb(61, 59, 94) 0%, rgb(51, 38, 121) 100%);
   }
-  body button {
+  body .muzammel {
     display: flex;
     border: none;
     height: 50%;
@@ -30,7 +31,7 @@ body::-webkit-scrollbar {
     text-decoration: none;
     background-color: rgba(0, 0, 0, 0);
   }
-  body button .left {
+  body .muzammel .left {
     height: 100%;
     min-width: 50%;
     display: flex;
@@ -38,12 +39,13 @@ body::-webkit-scrollbar {
     align-items: flex-end;
     flex-direction: column;
     flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0);
   }
-  body button .left .block1 {
+  body .muzammel .left .block1 {
     font-family: sans-serif;
-    font-size: 80px;
+    font-size: 9vh;
     font-weight: 900;
-    margin-right: 130px;
+    margin-right: 65px;
     padding: 25px;
     background: rgb(61, 59, 94);
     background: linear-gradient(135deg, rgb(61, 59, 94) 0%, rgb(51, 38, 121) 100%);
@@ -51,18 +53,19 @@ body::-webkit-scrollbar {
     box-shadow: 2px 2px 4px rgb(42, 41, 66), -2px -2px 4px rgb(78, 76, 120);
     color: rgb(226, 226, 226);
   }
-  body button .right {
+  body .muzammel .right {
     height: 100%;
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+    background-color: rgba(0, 0, 0, 0);
   }
-  body button .right .image {
+  body .muzammel .right .image {
     height: 75%;
     width: 50%;
-    margin-left: 75px;
+    margin-left: 65px;
     background: rgb(61, 59, 94);
     background: linear-gradient(135deg, rgb(61, 59, 94) 0%, rgb(51, 38, 121) 100%);
     border-radius: 25px;
@@ -70,32 +73,78 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: center;
   }
-  body button .right .image img {
+  body .muzammel .right .image img {
     border-radius: 25px;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
-    height: 650px;
-    width: auto;
+    height: auto;
+    width: 27vw;
+    background: rgba(0, 0, 0, 0);
   }
-  body a :hover {
-    color: black;
-    text-decoration: none;
-  }
-  body a :active {
-    color: black;
-    text-decoration: none;
-  }
-  body a :before {
-    color: black;
-    text-decoration: none;
-  }
-  body a :after {
-    color: black;
-    text-decoration: none;
-  }
-  body .left2 {
-    width: 50%;
+  body .part2 {
+    width: 100%;
     height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  body .part2 .left2 {
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+  body .part2 .left2 .container2 {
+    height: 50%;
+    width: 75%;
+    margin-right: 65px;
+    background: rgb(61, 59, 94);
+    background: linear-gradient(135deg, rgb(61, 59, 94) 0%, rgb(51, 38, 121) 100%);
+    border-radius: 25px;
+    box-shadow: 2px 2px 4px rgb(42, 41, 66), -2px -2px 4px rgb(78, 76, 120);
+    display: flex;
+    justify-content: center;
+  }
+  body .part2 .right2 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  body .part2 .right2 .container {
+    margin-left: 65px;
+    width: 66%;
+    height: auto;
+    font-size: 8vh;
+    font-family: sans-serif;
+    font-weight: 900;
+    padding: 25px;
+    background: rgb(61, 59, 94);
+    background: linear-gradient(135deg, rgb(61, 59, 94) 0%, rgb(51, 38, 121) 100%);
+    border-radius: 25px;
+    box-shadow: 2px 2px 4px rgb(42, 41, 66), -2px -2px 4px rgb(78, 76, 120);
+    color: #4070F4;
+    cursor: pointer;
+  }
+  body .part2 .right2 .container a {
+    text-decoration: none;
+  }
+  body .part2 .right2 .container .text {
+    color: white;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+  }
+  html {
+    scroll-behavior: smooth;
   }
 }
 @media only screen and (max-device-width: 500px) {
@@ -104,7 +153,7 @@ body::-webkit-scrollbar {
     width: 100vw;
     height: 200vh;
   }
-  body button {
+  body .muzammel {
     color: black;
     text-decoration: none;
     background-color: rgba(0, 0, 0, 0);
@@ -117,15 +166,16 @@ body::-webkit-scrollbar {
     height: 50%;
     width: 100%;
   }
-  body button .left {
+  body .muzammel .left {
     width: 100%;
     height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0);
   }
-  body button .left .block1 {
+  body .muzammel .left .block1 {
     font-family: sans-serif;
     font-size: 75px;
     font-weight: 900;
@@ -135,16 +185,18 @@ body::-webkit-scrollbar {
     border-radius: 25px;
     box-shadow: 2px 2px 4px rgb(42, 41, 66), -2px -2px 4px rgb(78, 76, 120);
     color: rgb(226, 226, 226);
+    background-color: rgba(0, 0, 0, 0);
   }
-  body button .right {
+  body .muzammel .right {
     width: 100%;
     height: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0);
   }
-  body button .right .image {
+  body .muzammel .right .image {
     background: rgb(61, 59, 94);
     background: linear-gradient(135deg, rgb(61, 59, 94) 0%, rgb(51, 38, 121) 100%);
     border-radius: 25px;
@@ -153,14 +205,16 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     height: 180%;
-    width: 50%;
+    width: 55%;
+    background-color: rgba(0, 0, 0, 0);
   }
-  body button .right .image .me {
+  body .muzammel .right .image .me {
     border-radius: 25px;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
-    height: 300px;
+    height: 340px;
     width: auto;
+    background-color: rgba(0, 0, 0, 0);
   }
   body a :hover {
     color: black;
